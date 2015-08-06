@@ -1,0 +1,48 @@
+static keyword - > java is used for memory management mainly
+static method -> without creating an object of class
+static variable - > Need to declare in class level, if we declare in method will not compile
+
+Interface and abstract class -> it cannot be declared as final
+
+Final Variable - > the value of this variable, but It can't be change
+Final method - > you cannot override itfinal class
+Final Class -> It connot be extended.
+
+Overloading -> multiple methods by same name but different parameters, it is known as Method Overloading
+
+Constructor -> Name should be same like class name.Constructor must not have return type.
+
+Super -> Invoke super class contructor
+
+abstract class can extend in another class.
+abstract class B 
+class M extends B{ 
+
+Checked expception - > Run time Uncheck exception -> not found during compile time (nullpointer, 
+arithemtic, Arryayindec
+
+Userdefiend exception 
+----------------------
+
+class WrongInputException extends Exception {
+   WrongInputException(String s) {
+      super(s);
+   }
+}
+class Input {
+   void method() throws WrongInputException {
+      throw new WrongInputException("Wrong input");
+   }
+}
+
+
+Collections
+----------
+ArrayList -> Iterator, not synchornized , addAll,removeAll,retainAll
+HashMap -> non synchronized., A HashMap contains values based on the key,It may have one null key and multiple null values.
+            It maintains no order .  for(Map.Entry m:hm.entrySet()){  
+   System.out.println(m.getKey()+" "+m.getValue());  HashMap is traversed by Iterator.
+HashTable -> It contains only unique elements. It may have not have any null key or value.Hashtable is traversed by Enumerator and Iterator.
+
+Comparable -> We can sort the list elements of Comparable type by Collections.sort(List) method.
+Comparator -> We can sort the list elements of Comparator type by Collections.sort(List,Comparator) method.

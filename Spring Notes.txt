@@ -1,0 +1,38 @@
+Spring IOC : - IoC container gets informations from the XML file and works accordingly.
+Dependency Injection - > removes the dependency from the programmin
+class Employee{  
+Address address;  
+Employee(Address address){  
+this.address=address;  
+} 
+Spring framework provides two ways to inject dependency
+
+    By Constructor
+    By Setter method
+<bean id="e" class="com.javatpoint.Employee">  
+<constructor-arg value="10" type="int" ></constructor-arg>  
+<constructor-arg value="Sonoo"></constructor-arg>  
+</bean>  
+
+<bean id="address1" class="com.javatpoint.Address">  
+<property name="addressLine1" value="51,Lohianagar"></property>  
+
+In Spring Web MVC, DispatcherServlet class works as the front controller
+------------------------------------------------------------------------
+
+@Controller
+@RequestMapping annotation is used to map the request url. 
+<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">  // for UI
+public ModelAndView helloWorld() 
+
+ @RequestMapping(value = "/addContact", method = RequestMethod.POST)  
+    public String addContact(@ModelAttribute("contact") Contact contact, BindingResult result) {  
+        //write the code here to add contact  
+        return "redirect:contact.html";  
+    }  
+
+Autowiring > -Autowiring enables the programmer to inject the bean automatically 	byName, byType, Constructor
+
+different bean scopes in spring - request,session,singleton,prototype
+
+AOP - > advice, pointcut,aspect,Joint point
